@@ -43,6 +43,7 @@ class DeveloperSerializer(serializers.ModelSerializer):
     class Meta:
         model = Developer
         fields = '__all__'
+        depth = 3
 
 
 class OurProjectSerializer(serializers.ModelSerializer):
