@@ -1,0 +1,48 @@
+.development-process {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  align-items: center;
+  background: #414141;
+
+  .container {
+    width: 100%;
+  }
+
+  &__wrapper {
+    overflow-x: scroll;
+  }
+
+  /* Для Webkit-браузеров (Chrome, Safari) */
+  &__wrapper::-webkit-scrollbar {
+    height: 7px; /* Высота полосы прокрутки */
+  }
+
+  &__wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3); /* Цвет дорожки */
+  }
+
+  &__wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3); /* Цвет ползунка */
+    border-radius: 10px; /* Скругленные края */
+    transition: background 0.3s ease;
+  }
+
+  &__wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5); /* Цвет ползунка при наведении */
+  }
+
+  &__img {
+    height: 716px;
+    min-width: 4292px;
+  }
+}
+
+@media (width <=768px) {
+  .development-process {
+    &__img {
+      height: 608px;
+      min-width: 2488px;
+    }
+  }
+}

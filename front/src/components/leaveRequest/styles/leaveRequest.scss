@@ -1,0 +1,61 @@
+@use "../../../styles/variants.scss";
+
+.leave-request {
+  background: #414141;
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+
+  .container {
+    width: 100%;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: clamp(5rem, 4.469rem + 2.65vw, 6.875rem);
+  }
+
+  &__offer {
+    padding: 30px 0 0 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 10px;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 0.792rem + 3.54vw, 4rem);
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    text-wrap: balance;
+    height: max-content;
+  }
+
+  &__sub-title {
+    font-size: clamp(0.875rem, 0.556rem + 1.59vw, 2rem);
+    color: rgba(255, 255, 255, 60%);
+    text-transform: lowercase;
+    text-wrap: balance;
+    font-weight: 500;
+  }
+}
+
+@media (width <= 1336px) {
+  .leave-request {
+    gap: 50px;
+    &__offer {
+      padding: 0 0 0 0;
+    }
+  }
+}
+
+@media (width <= 630px) {
+  .leave-request {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}

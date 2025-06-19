@@ -1,0 +1,72 @@
+@use "../../../styles/variants.scss";
+
+.our-services {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  align-items: center;
+
+  .container {
+    width: 100%;
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(448px, 1fr));
+    gap: 20px;
+  }
+
+  &__item {
+    height: 563px;
+    background: #414141;
+    align-self: flex-end;
+    color: #fff;
+    border-radius: clamp(1.25rem, 0.896rem + 1.77vw, 2.5rem);
+    padding: clamp(1.25rem, 0.896rem + 1.77vw, 2.5rem);
+    padding-top: 40px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+  }
+
+  &__button {
+    display: block;
+    text-align: center;
+    p {
+      @include variants.txtGradientHover("заказать");
+    }
+  }
+
+  &__name {
+    font-family: "CSPcircle", sans-serif;
+    font-size: clamp(2rem, 1.717rem + 1.42vw, 3rem);
+  }
+
+  &__description {
+    font-size: clamp(1rem, 0.929rem + 0.35vw, 1.25rem);
+    margin: clamp(0.938rem, 0.761rem + 0.88vw, 1.563rem) 0 60px 0;
+  }
+
+  &__price {
+    text-align: right;
+    font-size: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
+
+    span {
+      font-size: clamp(1.5rem, 1.358rem + 0.71vw, 2rem);
+      font-weight: 700;
+    }
+  }
+}
+
+@media (width <= 60.188em) {
+  .our-services {
+    &__wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+
+    &__item {
+      height: max-content;
+    }
+  }
+}
