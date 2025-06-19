@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-FROM nginx:alpineAdd
+FROM nginx:alpine
 # убираем дефолтный конфиг
 RUN rm /etc/nginx/conf.d/default.conf
 # копируем собранную папку в папку, откуда Nginx будет раздавать фронтенд
