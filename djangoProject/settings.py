@@ -155,8 +155,15 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:8000',
     'http://localhost:80',
-    'http://cspweb.ru'
     'https://cspweb.ru'
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'x-requested-with',
 ]
 
 CORS_ORIGIN_WHITELIST = [

@@ -44,7 +44,7 @@ services:
       - static_data:/usr/share/nginx/html/static:ro
       - media_data:/usr/share/nginx/html/media:ro
       # собранный фронтенд
-      - frontend_build:/usr/share/nginx/html/frontend:ro
+      - ./front/dist:/usr/share/nginx/html/frontend:ro
       # сертификаты
       - /etc/letsencrypt:/etc/letsencrypt:ro
       - /var/www/certbot:/var/www/certbot:ro
@@ -57,4 +57,3 @@ volumes:
   mysql_data:
   static_data:
   media_data:
-  frontend_build:
