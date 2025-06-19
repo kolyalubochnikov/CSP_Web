@@ -1,3 +1,9 @@
+# 1) билдим статические файлы с Vite (или CRA)
+FROM node:18-alpine AS builder
+WORKDIR /app
+
+COPY . .
+
 FROM nginx:alpineAdd
 # убираем дефолтный конфиг
 RUN rm /etc/nginx/conf.d/default.conf
