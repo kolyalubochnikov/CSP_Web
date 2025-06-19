@@ -2,7 +2,7 @@
 FROM node:18-alpine AS builder
 WORKDIR /app
 
-COPY . .
+COPY . ./
 
 FROM nginx:alpine
 # убираем дефолтный конфиг
